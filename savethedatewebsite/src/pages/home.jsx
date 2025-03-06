@@ -203,7 +203,7 @@ export const Home = () => {
     setDownloadMessage("Downloading calendar event...");
     const event = {
       title: "Libby & Jayson - Save the Date",
-      start: "2026-03-28T18:00:00",
+      start: "2026-03-28T17:30:00",
       end: "2026-03-28T23:00:00",
     };
     
