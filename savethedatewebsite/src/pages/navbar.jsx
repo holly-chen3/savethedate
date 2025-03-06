@@ -1,7 +1,6 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
 import { styled } from '@mui/system';
 import WeddingLogo from '../assets/logo.png';
-import { BrownButton } from "./brownbutton";
 import { Link } from 'react-router-dom';
 
 const Nav = styled(AppBar)({
@@ -32,12 +31,6 @@ const Logo = styled('img')({
   marginRight: '1rem',
 });
 
-const NavLinks = styled(Box)({
-  display: 'flex',
-  alignItems: 'center',
-  gap: '2rem',
-});
-
 export const NavBar = () => {
   return (
     <Nav position="static">
@@ -45,9 +38,6 @@ export const NavBar = () => {
         <LogoContainer to={"/"}>
           <Logo src={WeddingLogo} alt="Wedding Logo" />
         </LogoContainer>
-        <NavLinks>
-          <BrownButton page="RSVP" text="Submit Details" />
-        </NavLinks>
       </ToolBarStyled>
     </Nav>
   );
