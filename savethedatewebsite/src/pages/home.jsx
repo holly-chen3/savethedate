@@ -20,12 +20,13 @@ const HALF_ROTATION_RANGE = 32.5 / 2;
 const Root = styled(Box)({
   position: "relative",
   boxSizing: "border-box",
-  height: "100vh",
+  minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
   justifyContent: "center",
-  overflowY: "auto",
+  overflowX: "hidden",
+  padding: "1rem",
 });
 
 const VideoContainer = styled(motion.div)({
@@ -48,13 +49,18 @@ const Video = styled("video")({
   objectFit: "cover",
 });
 
-const ContentWrapper = styled(Box)({
+const ContentWrapper = styled(Box)(({ theme }) => ({
   display: "flex",
+  flexDirection: "row",
   width: "100%",
   height: "100vh",
-});
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+    height: "auto",
+  },
+}));
 
-const HalfContainer = styled(Box)({
+const HalfContainer = styled(Box)(({ theme }) => ({
   width: "50%",
   display: "flex",
   alignItems: "center",
@@ -62,7 +68,12 @@ const HalfContainer = styled(Box)({
   flexDirection: "column",
   padding: "1rem",
   gap: "1rem",
-});
+  [theme.breakpoints.down("sm")]: {
+    width: "100%",
+    padding: "2rem 1rem",
+  },
+}));
+
 
 const ImageContainer = styled(motion.div)({
   display: "flex",
@@ -74,13 +85,18 @@ const ImageContainer = styled(motion.div)({
   transformStyle: "preserve-3d",
 });
 
-const SaveTheDate = styled(motion.img)({
+const SaveTheDate = styled(motion.img)(({ theme }) => ({
   maxWidth: "80%",
   height: "auto",
   maxHeight: "80vh",
   borderRadius: "10px",
   boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
-});
+  [theme.breakpoints.down("sm")]: {
+    maxWidth: "90%",
+    maxHeight: "50vh",
+  },
+}));
+
 
 const FormContainer = styled(Box)({
   display: "flex",
