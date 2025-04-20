@@ -21,13 +21,15 @@ const Root = styled(Box)({
   position: "relative",
   boxSizing: "border-box",
   minHeight: "100vh",
+  width: "100%",
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "flex-start",
   overflowX: "hidden",
-  padding: "1rem",
+  backgroundColor: "#E9E8E7",
 });
+
 
 const VideoContainer = styled(motion.div)({
   position: "fixed",
@@ -56,7 +58,8 @@ const ContentWrapper = styled(Box)(({ theme }) => ({
   height: "100vh",
   [theme.breakpoints.down("sm")]: {
     flexDirection: "column",
-    height: "auto",
+    height: "auto",         
+    paddingBottom: "2rem", 
   },
 }));
 
@@ -107,12 +110,16 @@ const FormContainer = styled(Box)({
   maxWidth: "400px",
 });
 
-const RowContainer = styled(Box)({
+const RowContainer = styled(Box)(({ theme }) => ({
   display: "flex",
   flexDirection: "row",
   gap: "1rem",
   width: "100%",
-});
+  [theme.breakpoints.down("sm")]: {
+    flexDirection: "column",
+  },
+}));
+
 
 const Input = styled(TextField)({
   width: "100%",
