@@ -8,8 +8,8 @@ DTSTAMP:20250518T000000Z
 DTSTART;VALUE=DATE:20260328
 DTEND;VALUE=DATE:20260329
 SUMMARY:Libby & Jayson's Wedding
-DESCRIPTION:Save the date for Libby & Jayson's wedding at Curzon Hall!
-LOCATION:Curzon Hall, Sydney, NSW
+DESCRIPTION:Save the date for Libby & Jayson's wedding!
+LOCATION:Sydney, NSW
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
