@@ -42,10 +42,13 @@ export const Home = () => {
           textAlign: 'center',
         }}
       >
-        <Typography variant="h4" sx={{ mb: 1 }}>
+        <Typography variant="h4" sx={{ mb: 1, fontFamily: "'Suranna', serif" }}>
+          Celebrate with us
+        </Typography>
+        <Typography variant="h4" sx={{ mb: 1, fontFamily: "'Suranna', serif" }}>
           28 March 2026
         </Typography>
-        <Typography variant="h2" sx={{ fontWeight: 400, mb: 3 }}>
+        <Typography variant="h2" sx={{ fontWeight: 400, mb: 3, fontFamily: "'Suranna', serif" }}>
           Libby &amp; Jayson
         </Typography>
         <a
@@ -62,10 +65,11 @@ export const Home = () => {
               color: 'white',
               px: 4,
               py: 1.5,
-              fontSize: '1.1rem',
+              fontSize: '1.4rem',
               borderRadius: '8px',
               textTransform: 'none',
               mb: 3,
+              fontFamily: "'Suranna', serif",
               '&:hover': {
                 backgroundColor: '#333300',
               },
@@ -74,7 +78,7 @@ export const Home = () => {
             Save the date
           </Button>
         </a>
-        <Typography variant="subtitle1">Sydney, NSW</Typography>
+        <Typography variant="subtitle1" sx={{ fontFamily: "'Suranna', serif" }}>Sydney, NSW</Typography>
       </Box>
     </Box>
   );
